@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+var premeasure = require('./routes/premeasure')
 var measurement = require('./routes/measurement')
 var result = require('./routes/result')
 var users = require('./routes/users');
@@ -36,6 +37,7 @@ app.use(express.static('node_modules'));
 
 
 app.use('/', index);
+app.use('/premeasure', premeasure)
 app.use('/measurement', measurement);
 app.use('/result', result)
 app.use('/users', users);

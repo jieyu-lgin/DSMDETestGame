@@ -6,8 +6,18 @@
     body {
       padding: 10px;
     }
+    .hd-title {
+      font-size: 18px;
+      color: #369;
+    }
     #quiz-title, #quiz-story,#quiz-body {
       margin: 10px 0;
+    }
+    #quiz-title {
+      font-weight: bold;
+    }
+    #page {
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -19,7 +29,7 @@
   <div class="main">
     <div id="quiz-title"></div>
     <div id="quiz-story"></div>
-    <div>这样的情景在人类社会中也可能会出现哦!</div>
+    <div style="font-weight: bold;">这样的情景在人类社会中也可能会出现哦!</div>
     <div id="quiz-body"></div>
   </div>
   <div class="action-group">
@@ -28,6 +38,7 @@
     <input type="radio" name="quiz" class="radio-btn" value="2" /> 会
     <input type="radio" name="quiz" class="radio-btn" value="3" /> 经常
   </div>
+  <div id="page"></div>
 
   <script type="text/javascript">
     var quiz = [{
@@ -76,6 +87,7 @@
     var quizTitle = document.getElementById('quiz-title')
     var quizStory = document.getElementById('quiz-story')
     var quizBody = document.getElementById('quiz-body')
+    var page = document.getElementById('page')
     var radioBtns = document.getElementsByClassName('radio-btn')
 
     function renderQuiz(quizIndex) {
@@ -83,6 +95,7 @@
       quizTitle.innerText = currentQuiz.title
       quizStory.innerText = currentQuiz.story
       quizBody.innerText = currentQuiz.body
+      page.innerText = '当前第' + ' ' + (currentQuizIndex + 1) + ' ' + '题，' + '共' + quiz.length + '题'
     }
 
     renderQuiz(currentQuizIndex)

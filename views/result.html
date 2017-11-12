@@ -3,6 +3,9 @@
 <head>
   <title></title>
   <style type="text/css">
+    body {
+      padding: 10px;
+    }
     #quiz-result {
       display: none;
     }
@@ -15,17 +18,28 @@
     #overall, #detail {
       margin-bottom: 10px;
     }
+    #quiz-suggest {
+      margin-top: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div id="quiz-result">
     <div id="score"><%= score %></div>
     <div id="dArray"><%= detail %></div>
-    总体评估
-    <div id="overall"></div>
-    细节评估
-    <div id="detail"></div>
-    <button>咨询</button>
+    <div style="font-weight: bold;">总体评估</div>
+    <div id="overall-result"></div>
+    <div style="font-weight: bold;">单项评估</div>
+    <div id="detail-result"></div>
+    <button id="expand-suggest">查看改善建议</button>
+
+    <div id="quiz-suggest">
+      <div style="font-weight: bold;">总体建议</div>
+      <div id="overall-suggest"></div>
+      <div style="font-weight: bold;">单项建议</div>
+      <div id="detail-suggest"></div>
+    </div>
   </div>
 
   <div id="pay-block">
@@ -41,9 +55,13 @@
     var score = document.getElementById('score').textContent
     var dArray = JSON.parse(document.getElementById('dArray').textContent)
     var result = document.getElementById('quiz-result')
-    var overallResult = document.getElementById('overall')
-    var detailResult = document.getElementById('detail')
+    var suggest = document.getElementById('quiz-suggest')
+    var overallResult = document.getElementById('overall-result')
+    var detailResult = document.getElementById('detail-result')
+    var overallSuggest = document.getElementById('overall-suggest')
+    var detailSuggest = document.getElementById('detail-suggest')
     var payBlock = document.getElementById('pay-block')
+    var suggestBtn = document.getElementById('expand-suggest')
 
     var detailExplain = [
       '孩子专注力不完整,平时在进行知识吸收时,会出现遗漏现象。在生活中和学习中,马虎行为比较多。对于被要求去完成的事情,会出现抗拒表现。',
@@ -58,22 +76,47 @@
       '孩子学习性专注力比较匮乏,对知识吸收没有兴趣,缺乏积极性, 在学习上得过且过。'
     ]
 
+    var detailSuggests = [
+      '家长在与孩子进行沟通时,一定要使用相对完整的语言结构。同时,为了减少委屈等不良情绪对孩子专注力的影响,建议家长帮助孩子学会使用合理的方式进行语听验证。',
+      '家长在与孩子沟通时,要能够就事论事,同时增加陈述式沟通方式 的使用,避免使用质询的语气。',
+      '家长与孩子沟通时,应当学会静听,多等一等孩子,听孩子把话说 完。可以增加跟随性默述沟通技巧的使用。',
+      '家庭成员互相之间在沟通时,应当增加倾听的数量,不要急于否定 别人。在与孩子沟通时,要学会习惯性使用肯定语句和解释性语句。',
+      '建议家长和孩子一起培养共同的兴趣爱好。当家庭成员之间因为沟通而引起争执的时候,一方应当主动从冷暴力环境中脱离出来,增加与孩子的语听沟通量或视肢沟通量,比如,和孩子一起玩一个游戏。',
+      '家长在与孩子沟通时,应当减少交易性语言的使用,相反,应当增 加求索性语言的使用,增加孩子对家长的关注量,从而改善孩子的关注性专注力。',
+      '家庭成员之间应当培养尊敬意识,增加尊敬性沟通的数量。在与孩子沟通时,面对孩子的问题,要实事求是地分析问题的形成原因,和孩子一起寻求问题的解决方法,而不能只是一味地批评和指责孩子。',
+      '增加孩子接触的客观事物的数量,从而增加孩子的客观信息量。同时,还要帮助孩子提高对问题的分析能力,增加对客观事物的分析性。在与孩子一起对事物进行分析时,不要侧重于分析阴暗面或不良影响,而应当增加孩子对 阳光类事物的吸收量。',
+      '家长在与孩子沟通时,要更多地能够站在孩子的角度,以孩子能够 理解和接受的语言来与孩子沟通。同时,还要帮助孩子提高对问题进行客观分析 的能力。',
+      '家长在与孩子沟通时,不要把自己放在高位,而要把自己放在弱势 位置,增加沟通过程中对孩子的求助量。同时,还需要帮助孩子提高对自我问题 进行检索的能力。'
+    ]
+
     var quizOverallResult
-    var quizDetailResult = ''
+    var quizDetailResult = '无'
+    var quizOverallSuggest
+    var quizDetailSuggest = '无'
 
     if (score < 9) {
-      quizOverallResult = '孩子专注力较好,专注表现比较多。在主动完成一件事情时,专 注力表现尤其好,可以持续专注很长时间;在被动完成一件事情时,专注力表现 比较好,可以持续专注相对长时间。'
-      for (var i = 0; i < dArray.length; i ++) {
-        quizDetailResult += '<div>' + detailExplain[dArray[i]] + '</div>'
+      quizOverallResult = '孩子专注力较好,专注表现比较多。在主动完成一件事情时,专注力表现尤其好,可以持续专注很长时间;在被动完成一件事情时,专注力表现比较好,可以持续专注相对长时间。'
+      quizOverallSuggest = '孩子专注力较好,建议继续保持!'
+      if (dArray.length) {
+        quizDetailResult = ''
+        quizDetailSuggest = ''
+        for (var i = 0; i < dArray.length; i ++) {
+          quizDetailResult += '<div>' + detailExplain[dArray[i]] + '</div>'
+          quizDetailSuggest += '<div>' + detailSuggests[dArray[i]] + '</div>'
+        }
       }
     } else if (score < 21) {
-      quizOverallResult = '孩子专注力存在一定问题,激发性专注表现比较多。在主动完 成一件事情时,专注力表现比较好;在被动完成一件事情时,专注力持续时间不 够,专注表现不够多。在进行知识吸收时,会出现局部小肢体运动频繁、沉默、 发呆、走神等表现。'
+      quizOverallResult = '孩子专注力存在一定问题,激发性专注表现比较多。在主动完成一件事情时,专注力表现比较好;在被动完成一件事情时,专注力持续时间不够,专注表现不够多。在进行知识吸收时,会出现局部小肢体运动频繁、沉默、 发呆、走神等表现。'
+      quizOverallSuggest = '建议改善家庭沟通环境,减少家庭成员之间非合理沟通的数量,增加合理有效沟通的数量,尤其是面对孩子沟通时,更需注意,以孩子能够理解的方式来进行沟通,以减少不良情绪对孩子专注力的影响。家长平时在与孩子沟通时,要学会把自己放在弱势位置,增加对孩子的诉求量。同时,还要通过合理的对孩子分担能力的培养实现孩子分担性注意力的提升。'
     } else {
-      quizOverallResult = '孩子专注力存在较多问题。在主动完成一件事情时,有时都无 法很好地持续较长时间;在被动完成一件事情时,专注力转移现象明显,强迫行 为比较多,会频繁出现局部小肢体运动或发呆、走神等表现,有时会出现比较激 烈的情绪爆发表现。'
+      quizOverallResult = '孩子专注力存在较多问题。在主动完成一件事情时,有时都无法很好地持续较长时间;在被动完成一件事情时,专注力转移现象明显,强迫行为比较多,会频繁出现局部小肢体运动或发呆、走神等表现,有时会出现比较激 烈的情绪爆发表现。'
+      quizOverallSuggest = '建议改善家庭沟通环境,以减少家庭不良情绪对孩子专注力的影响。家长平时在与孩子沟通时,要减少纠缠,学会不盯视,增加自言自语类沟通技巧的使用。如果有必要,可以选择专业的专注力修复机构对孩子的专注力问 题进行改善和修复。'
     }
 
     overallResult.innerText = quizOverallResult
     detailResult.innerHTML = quizDetailResult
+    overallSuggest.innerText = quizOverallSuggest
+    detailSuggest.innerHTML = quizDetailSuggest
 
     alipay.addEventListener('click', function() {
       hasPaid = true
@@ -84,6 +127,10 @@
       hasPaid = true
       result.style.display = 'block'
       payBlock.style.display = 'none'
+    })
+    suggestBtn.addEventListener('click', function(e) {
+      suggest.style.display = 'block'
+      e.target.style.display = 'none'
     })
   </script>
 </body>

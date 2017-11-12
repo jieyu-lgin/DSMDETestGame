@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    #quiz-result {
+      display: none;
+    }
+    #pay-block {
+      margin: 10px;
+    }
+    #score, #dArray {
+      display: none;
+    }
+    #overall, #detail {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-result">
+    <div id="score"><%= score %></div>
+    <div id="dArray"><%= detail %></div>
+    总体评估
+    <div id="overall"></div>
+    细节评估
+    <div id="detail"></div>
+    <button>咨询</button>
+  </div>
+
+  <div id="pay-block">
+    <p>支付x元获得测试报告和建议</p>
+    <button id="alipay">支付宝支付</button>
+    <button id=wepay>微信支付</button>
+  </div>
+
+  <script type="text/javascript">
+    var hasPaid = false
+    var alipay = document.getElementById('alipay')
+    var weapp = document.getElementById('weapp')
+    var score = document.getElementById('score').textContent
+    var dArray = JSON.parse(document.getElementById('dArray').textContent)
+    var result = document.getElementById('quiz-result')
+    var overallResult = document.getElementById('overall')
+    var detailResult = document.getElementById('detail')
+    var payBlock = document.getElementById('pay-block')
+
+    var detailExplain = [
+      '孩子专注力不完整,平时在进行知识吸收时,会出现遗漏现象。在生活中和学习中,马虎行为比较多。对于被要求去完成的事情,会出现抗拒表现。',
+      '孩子专注力不太好,在进行知识吸收时,会不时出现趋向沉默、发呆、走神等虚拟性注意力匮乏表现。与人沟通时,会出现不愿意与别人沟通的表现。',
+      '孩子持续性专注力不太好。在被动进行知识吸收时,会出现小动作过多、常插嘴、爱接话茬等表现。有时,也会出现沉默、发呆、走神等表现。',
+      '孩子持续性专注力匮乏。在被动进行知识吸收时,会出现小动作过多、常插嘴、爱接话茬等表现,甚至会出现否定、顶嘴等现象。有时,也会出现沉默、发呆、走神等表现。对于被要求去完成的事情,会出现较多的抗拒表现。',
+      '孩子专注力匮乏,在进行知识吸收时,时常会出现沉默、发呆、走神、发愣等表现。有时,会拒绝与别人沟通,逐步可能会形成暴力行为。',
+      '孩子激发性注意力现象比较突出,表现为:持续性专注力不足,专注力时好时坏。在某个阶段可能会呈现出注意力还不错的表现,但是不能持续。',
+      '孩子在进行知识吸收时,拒绝性表现比较多,专注力转移现象突出, 学习积极性明显不足。或是时常出现愿意自己独自做事情,而不愿意与别人沟通的表现。',
+      '在进行知识吸收时,会出现变异性专注力表现,看似在吸收,实则在胡思乱想。对所吸收的知识和内容,经常性持否定态度,从而无法很好地吸收 本应吸收的内容。',
+      '专注力使用性不足,可能会很努力,但是会因为使用时间过长而形成专注力使用疲劳,久而久之,会对专注力形成遗弃和厌弃表现。有时会出现迷茫表现,不知道自己该干什么,不知道专注力用在哪儿。',
+      '孩子学习性专注力比较匮乏,对知识吸收没有兴趣,缺乏积极性, 在学习上得过且过。'
+    ]
+
+    var quizOverallResult
+    var quizDetailResult = ''
+
+    if (score < 9) {
+      quizOverallResult = '孩子专注力较好,专注表现比较多。在主动完成一件事情时,专 注力表现尤其好,可以持续专注很长时间;在被动完成一件事情时,专注力表现 比较好,可以持续专注相对长时间。'
+      for (var i = 0; i < dArray.length; i ++) {
+        quizDetailResult += '<div>' + detailExplain[dArray[i]] + '</div>'
+      }
+    } else if (score < 21) {
+      quizOverallResult = '孩子专注力存在一定问题,激发性专注表现比较多。在主动完 成一件事情时,专注力表现比较好;在被动完成一件事情时,专注力持续时间不 够,专注表现不够多。在进行知识吸收时,会出现局部小肢体运动频繁、沉默、 发呆、走神等表现。'
+    } else {
+      quizOverallResult = '孩子专注力存在较多问题。在主动完成一件事情时,有时都无 法很好地持续较长时间;在被动完成一件事情时,专注力转移现象明显,强迫行 为比较多,会频繁出现局部小肢体运动或发呆、走神等表现,有时会出现比较激 烈的情绪爆发表现。'
+    }
+
+    overallResult.innerText = quizOverallResult
+    detailResult.innerHTML = quizDetailResult
+
+    alipay.addEventListener('click', function() {
+      hasPaid = true
+      result.style.display = 'block'
+      payBlock.style.display = 'none'
+    })
+    wepay.addEventListener('click', function() {
+      hasPaid = true
+      result.style.display = 'block'
+      payBlock.style.display = 'none'
+    })
+  </script>
+</body>
+</html>

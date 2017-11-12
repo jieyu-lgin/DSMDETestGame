@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'DSMDE 天穹工程' });
+  res.render('measurement', { title: 'DSMDE 天穹工程' });
 });
 
 module.exports = router;

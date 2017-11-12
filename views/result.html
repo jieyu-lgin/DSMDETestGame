@@ -3,6 +3,9 @@
 <head>
   <title></title>
   <style type="text/css">
+    body {
+      padding: 10px;
+    }
     #quiz-result {
       display: none;
     }
@@ -21,9 +24,9 @@
   <div id="quiz-result">
     <div id="score"><%= score %></div>
     <div id="dArray"><%= detail %></div>
-    总体评估
+    <div style="font-weight: bold;">总体评估</div>
     <div id="overall"></div>
-    细节评估
+    <div style="font-weight: bold;">细节评估</div>
     <div id="detail"></div>
     <button>咨询</button>
   </div>
@@ -59,12 +62,15 @@
     ]
 
     var quizOverallResult
-    var quizDetailResult = ''
+    var quizDetailResult = '无'
 
     if (score < 9) {
       quizOverallResult = '孩子专注力较好,专注表现比较多。在主动完成一件事情时,专 注力表现尤其好,可以持续专注很长时间;在被动完成一件事情时,专注力表现 比较好,可以持续专注相对长时间。'
-      for (var i = 0; i < dArray.length; i ++) {
-        quizDetailResult += '<div>' + detailExplain[dArray[i]] + '</div>'
+      if (dArray.length) {
+        quizDetailResult = ''
+        for (var i = 0; i < dArray.length; i ++) {
+          quizDetailResult += '<div>' + detailExplain[dArray[i]] + '</div>'
+        }
       }
     } else if (score < 21) {
       quizOverallResult = '孩子专注力存在一定问题,激发性专注表现比较多。在主动完 成一件事情时,专注力表现比较好;在被动完成一件事情时,专注力持续时间不 够,专注表现不够多。在进行知识吸收时,会出现局部小肢体运动频繁、沉默、 发呆、走神等表现。'

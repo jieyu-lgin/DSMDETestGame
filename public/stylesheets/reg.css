@@ -1,0 +1,56 @@
+#regpanel{
+	display: none; 
+	position: absolute;
+	text-align: center;
+	width:350px;
+	height: 500px;
+	border-radius:0.5rem;
+	top:40px;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:10px auto;
+	background-color:#555;
+	padding:20px;
+	z-index:1003; 
+	overflow: auto;
+}
+
+#telnumber,.normalInput,.password3,.password4{
+	position: relative;
+	width:100%;
+	margin-bottom:17px;
+	padding: 15px;
+	background-color: #fff;
+	border-radius:2px;
+	border:none;
+}
+#telcode{
+	position: relative;
+	left: -16px;
+	width:60%;
+	margin-bottom:0px;
+	padding: 0px;
+	background-color: #fff;
+	border-radius:0px;
+	border:none;
+}
+
+.error1,.error2,.error3{
+	color: red;	
+	font-size: 16px;
+}
+
+#affirm{
+	display: none;
+}
+/*mainForm1*/
+
+.mainForm{width: 300px;  margin: 0px auto 0px;overflow: hidden;}
+.number{font-size: 20px;margin-left: -5px;margin-bottom: 30px;width: 300px;text-align: center;}
+.number a{color: white;}
+.linkABlue:visited {color: #00a7ea;}
+.linkAGray:hover{color: #2b2b2b;}
+.number span{color: #d9d9d9;display: inline-block;border: 1px solid #dadada;border-left: 1px;height: 16px;line-height: 20px;margin-right: 20px;margin-left: 20px;}
+/*分割线*/
+.formLine{color: #d9d9d9;height: 40px;display: inline-block;border-left: 1px solid #dadada;position: absolute;right: 130px;top: 5px;}

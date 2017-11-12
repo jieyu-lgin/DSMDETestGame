@@ -1,0 +1,150 @@
+/* 导入CDN提供的bootstrap3相关样式文件 */
+@import url('/bootstrap.min.css');
+@import url('/bootstrap-theme.min.css');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+.loginbody{
+	font-family: 'microsoft',Arial,sans-serif;
+	background-color: #222222;
+}
+
+.row{padding:20px 0px;}
+
+/*定义loginpanel*/
+#lginpanel{
+	display: none; 
+	position: absolute;
+	text-align: center;
+	width:350px;
+	height: 500px;
+	border-radius:0.5rem;
+	top:40px;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:10px auto;
+	background-color:#555;
+	padding:20px;
+	z-index:1003; 
+	overflow: auto;
+}
+
+
+
+#username,#password{
+	width:100%;
+	margin-bottom:17px;
+	padding: 15px;
+	background-color: #fff;
+	border-radius:2px;
+	border:none;
+}
+
+/*其他基本元素的定义*/
+h2{
+	
+	top: 50px;
+	margin-bottom: 20px;
+	font-weight: normal;
+	color: white;
+}
+.btnlgin{
+	border-radius:2px;
+	padding:10px;
+}
+.btnlgin span{
+	font-size:27px;
+	color: white;
+}
+.buttonwrapper{
+	position: relative;
+	overflow:hidden;
+	height:50px;
+}
+
+
+.exitpanel{
+	position: relative;
+	overflow:auto;
+	height:50px;
+}
+
+.loginbutton{////////
+	background-color: #f08000;
+	width: 100%;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+  	left: -310px; /* 这里定义绝对定位，设置left可以使得按钮消失，设置为0则出现 */
+  	position:absolute;
+  	top:0;
+}
+
+.lockbutton{
+	color: red;
+	padding:10px;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+.redborder{
+	border:2px solid red;
+	border-radius: 2px;
+}
+.whiteborder{
+	border:2px solid white;
+	border-radius: 2px;
+}
+
+.lginLi{
+	height: 0px;
+	list-style: none;
+}
+#cancel1{
+	padding-left: 80px;
+
+}
+.navlist{
+	position:absolute;
+	left:0px;
+	color: white;
+}
+.navlist li{
+	list-style: none;
+	float: left;
+	border: 0;
+	height: 30px;
+}
+
+.weibo-button, .qq-button{
+	color: #fff;
+	width: 110px;
+
+	background-color: #3b5998;
+	font-size: 12px;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.weibo-button .qq-button:hover{
+	  background-color: rgba(59, 89, 152, 0.8);
+}
+#weibo-padding{
+	padding-left: -30px;
+
+}
+#qq-padding{
+	padding-left: 30px;
+
+}
+.form-group{
+	width:300px;
+}

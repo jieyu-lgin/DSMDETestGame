@@ -1,8 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-  <style type="text/css">
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title>学前儿童专注力测评与评估</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+  	<link href='/stylesheets/login.css' rel="stylesheet">
+  	<link href='/stylesheets/reg.css' rel="stylesheet">
+  	   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  	    <!--[if lt IE 9]>
+  	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  	    <![endif]-->
+  	<style type="text/css">
     body {
       padding: 10px;
     }
@@ -25,28 +39,109 @@
   </style>
 </head>
 <body>
+  <!-- 导航条 -->
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+     <div class="container-fluid text-center">
+      <ul class="nav nav-pills ">
+        <a class="navbar-brand" href="#">DSMDE 天穹工程</a>
+        <li class="active" ><a href="/premeasure">  学前儿童专注力测评与评估  </a></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+           分类 <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+           <li><a href="#">情感能力</a></li>
+           <li><a href="#">赚钱能力</a></li>
+           <li><a href="#">注意力</a></li>
+           <li class="divider"></li>
+           <li><a href="#">专注力</a></li>
+           <li class="divider"></li>
+           <li><a href="#">企业管理</a></li>
+        </ul>
+       </li>
+       <li >
+         <a type = "button" data-target="#demo" class="btn" data-toggle="collapse" aria-expanded="false">
+           <span class = "glyphicon glyphicon-search"></span>
+         </a>
+       </li>
+       <ul class="nav nav-pills  navbar-right ">
+        <!--注册按钮  -->
+        <li><a href="#" onclick="showdiv2();"><img src = "/images/reg2.png" width="20" height = "20"></a></li>
+        <!-- 登录按钮 -->
+        <li><a type = "button" onclick="showdiv();">
+            <span class = "glyphicon glyphicon-user"></span>
+          </a>
+        </li>
+      </ul>
+      </ul>
+    </div>
+    <!-- <ul class="lginLi"> -->
+      <div class="lginLi">
+         <div id="demo" class=" nav-pills collapse" >
+            <form class="col-lg-6  navbar-left" role="search">
+              <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+              </div>
+            </form>
+         </div>
+      </div>
+      <!-- account nav -->
+    <!-- </ul> -->
+  </nav>
+<!--主体-->
+  <div style="margin-top:40px">
   <div id="quiz-result">
     <div id="score"><%= score %></div>
     <div id="dArray"><%= detail %></div>
-    <div style="font-weight: bold;">总体评估</div>
-    <div id="overall-result"></div>
-    <div style="font-weight: bold;">单项评估</div>
-    <div id="detail-result"></div>
-    <button id="expand-suggest">查看改善建议</button>
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+    <div style="font-weight: bold;" class="panel-heading">总体评估</div>
+    <div id="overall-result" class="panel-body"></div>
+    <div style="font-weight: bold;" class="panel-heading">单项评估</div>
+    <div id="detail-result" class="panel-body"></div>
+    </div>
+    <button id="expand-suggest" class="btn btn-primary btn-lg ">查看改善建议</button>
 
     <div id="quiz-suggest">
-      <div style="font-weight: bold;">总体建议</div>
-      <div id="overall-suggest"></div>
-      <div style="font-weight: bold;">单项建议</div>
-      <div id="detail-suggest"></div>
+    <div class="panel panel-default">
+      <div style="font-weight: bold;" class="panel-heading">总体建议</div>
+      <div id="overall-suggest" class="panel-body"></div>
+      <div style="font-weight: bold;" class="panel-heading">单项建议</div>
+      <div id="detail-suggest" class="panel-body"></div>
     </div>
+      <button  class="btn btn-primary btn-lg ">第二生命形态学大讲堂</button>
+
+    </div>
+
   </div>
 
-  <div id="pay-block">
-    <p>支付x元获得测试报告和建议</p>
-    <button id="alipay">支付宝支付</button>
-    <button id=wepay>微信支付</button>
+
+  <div id="pay-block" >
+
+    <div class="jumbotron">
+      <div class="img1">
+      <p style="text-align:center">支付x元获得测试报告和建议</p>
+        <div style="width:250px;margin-left:auto;margin-right:auto;">
+        <button id="alipay" class="btn btn-primary btn-lg " style="width:120px" >支付宝支付</button>
+        <button id=wepay class="btn btn-primary btn-lg  " style="width:120px" >微信支付</button>
+      </div>
+      </div>
+
+      </div>
+    </div>
+
+
   </div>
+</div>
+<footer class="container" style="margin-top: 100px;">
+    <p class="text-center">Copyright ©2017 第二生命形态学天穹工程线上测评系统
+        <br>
+        <a href="http://www.gudschool.com" target=_new>上海页颂教育科技有限公司|北京顾宏翔教育科技研究院</a>
+    </p>
+</footer>
 
   <script type="text/javascript">
     var hasPaid = false

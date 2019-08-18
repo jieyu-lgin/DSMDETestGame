@@ -186,34 +186,34 @@ span.display {
 /*--/slider--*/
 
 .carousel-item {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(../images/office01.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(../images/office01.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(../images/office01.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(../images/office01.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(https://static2.tianqionggongcheng.com/office01.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(https://static2.tianqionggongcheng.com/office01.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(https://static2.tianqionggongcheng.com/office01.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.1)), url(https://static2.tianqionggongcheng.com/office01.jpg) no-repeat;
 	background-size: cover;
 }
 
 .carousel-item.item2 {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/news-summer-homework5.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/news-summer-homework5.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/news-summer-homework5.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/news-summer-homework5.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/news-summer-homework5.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/news-summer-homework5.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/news-summer-homework5.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/news-summer-homework5.jpg) no-repeat;
 	background-size: cover;
 }
 
 .carousel-item.item3 {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/mathbrain-01.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/mathbrain-01.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/mathbrain-01.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/mathbrain-01.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/mathbrain-01.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/mathbrain-01.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/mathbrain-01.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/mathbrain-01.jpg) no-repeat;
 	background-size: cover;
 }
 
 .carousel-item.item4 {
-	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/office04.jpg) no-repeat;
-	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/office04.jpg) no-repeat;
-	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/office04.jpg) no-repeat;
-	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/office04.jpg) no-repeat;
+	background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/office04.jpg) no-repeat;
+	background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/office04.jpg) no-repeat;
+	background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/office04.jpg) no-repeat;
+	background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(https://static2.tianqionggongcheng.com/office04.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -896,7 +896,7 @@ ul.portfolio-area li figure {
 /*-- odometer --*/
 
 .odometer1 {
-    background: url(../images/stats.jpg) no-repeat 0px 0px;
+    background: url(https://static2.tianqionggongcheng.com/our-product.jpg) no-repeat 0px 0px;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -1179,6 +1179,18 @@ ul.portfolio-area li figure {
     font-size: 100px;
 	margin-top: 1.2em;
 }
+.welcome .detail-company {
+  background: #fff;
+  padding: 0px 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  color: #777;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: .5px;
+}
+
+
 /*-- //welcome bottom --*/
 
 /*-- //services page --*/

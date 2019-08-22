@@ -61,6 +61,12 @@ img{
     color: #343434;
     text-transform: capitalize;
 }
+.img-box  {
+	height: 15rem;
+}
+.img-box .img-fluid {
+	width:10rem;
+}
 .profile .img-box{
 
 	opacity: 1;

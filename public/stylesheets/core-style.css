@@ -835,6 +835,11 @@
     margin-right: 30px;
     max-width: 32%;
 }
+.todays-post-thumb .news-today {
+    margin: auto 0;
+    width:  200px;
+    height: 200px;
+}
 
 .todays-post-content {
     -webkit-box-flex: 0;

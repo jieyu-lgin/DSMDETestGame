@@ -38,7 +38,13 @@ label{
 img{
 	width:100%;
 }
+.know-more  {
+  margin-top:10px;
 
+}
+.text-capitalize {
+	color: #333;
+}
 /*-- //slider --*/
 .w3-head-all h3 {
     font-size: 3em;

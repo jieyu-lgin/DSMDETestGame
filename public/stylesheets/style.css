@@ -927,7 +927,14 @@ ul.portfolio-area li figure {
 	display: block;
 	position: relative;
 }
-
+.portfolio-item2  .image-block  {
+	width: 160px;
+	height: 240px;
+}
+.portfolio-item2 .not-long-img .image-block  {
+	width: 160px;
+	height: 108px;
+}
 .portfolio-area li {
 	float: left;
     list-style-type: none;

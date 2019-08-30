@@ -507,7 +507,7 @@ span.display {
 .modal-body.video iframe {
 	border: none;
 	width: 100%;
-	min-height: 250px;
+	min-height: 450px;
 }
 
 h5#exampleModalLabel {
@@ -1287,7 +1287,7 @@ ul.portfolio-area li figure {
 
 /*-- welcome bottom --*/
 .welcome_bottom{
-	background: url(../images/banner2.jpg) no-repeat 0px 0px;
+	background: url(https://static2.tianqionggongcheng.com/our-activities.jpg) no-repeat 0px 0px;
 	background-size: cover;
 }
  .welcome_right:after{

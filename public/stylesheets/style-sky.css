@@ -1634,6 +1634,18 @@ ul.rating li span.fas {
 	.welcome_right3 {
 	    min-height: 300px;
 	}
+	.welcome_right4 {
+			min-height: 300px;
+	}
+	.welcome_right5 {
+			min-height: 300px;
+	}
+	.welcome_right6 {
+			min-height: 300px;
+	}
+	.welcome_right7 {
+			min-height: 300px;
+	}
 }
 @media(max-width: 1080px){
   .navbar-light .navbar-brand, .navbar-light .navbar-toggler {
@@ -2007,6 +2019,15 @@ ul.rating li span.fas {
 	}
 	.welcome_right3 {
 	    min-height: 200px;
+	}
+	.welcome_right4 {
+			min-height: 200px;
+	}
+	.welcome_right5 {
+			min-height: 200px;
+	}
+	.welcome_right6 {
+			min-height: 200px;
 	}
 }
 @media(max-width: 414px){

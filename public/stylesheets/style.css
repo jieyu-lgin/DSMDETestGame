@@ -38,7 +38,10 @@ label{
 img{
 	width:100%;
 }
-
+.news-pic {
+	max-width: 480px;
+	margin: 0 auto;
+}
 /*-- //slider --*/
 .w3-head-all h3 {
     font-size: 3em;

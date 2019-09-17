@@ -842,10 +842,9 @@
 }
 
 .todays-post-content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 68%;
-            flex: 0 0 68%;
+
     max-width: 68%;
+
 }
 
 .todays-post-content h3 a {

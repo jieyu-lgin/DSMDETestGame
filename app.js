@@ -22,6 +22,7 @@ var new119091701 = require('./routes/new119091701');
 var new119091801 = require('./routes/new119091801');
 var new119092401 = require('./routes/new119092401');
 var new119093001 = require('./routes/new119093001');
+var new119101101 = require('./routes/new119101101');
 var newTianjin190908 = require('./routes/newTianjin190908');
 var newTianjin191001 = require('./routes/newTianjin191001');
 var newTianjin191002 = require('./routes/newTianjin191002');
@@ -77,6 +78,8 @@ app.use('/new119091701', new119091701);
 app.use('/new119091801', new119091801);
 app.use('/new119092401', new119092401);
 app.use('/new119093001', new119093001);
+app.use('/new119101101', new119101101);
+
 app.use('/newTianjin190908', newTianjin190908);
 app.use('/newTianjin191001', newTianjin191001);
 app.use('/newTianjin191002', newTianjin191002);

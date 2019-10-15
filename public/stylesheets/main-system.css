@@ -496,7 +496,13 @@ html .ma {
 .news__category {
   margin-bottom: 20px;
   font-weight: bolder;
-  color: #f38844;
+  color: #009688;
+  text-transform: uppercase;
+}
+.news__category_red {
+  margin-bottom: 20px;
+  font-weight: bolder;
+  color: #ff0303;
   text-transform: uppercase;
 }
 

@@ -119,7 +119,7 @@ svg rect {
 
 /* end form hover effect */
 /* yellow line in title word*/
-.yel_line, .yellow-line, .underscore {
+.yel_line, .yellow-line, .green-line, .underscore {
     position: relative;
 }
 
@@ -129,6 +129,15 @@ svg rect {
     bottom: -2px;
     left: 0;
     background: #f38844;
+    height: 2px;
+    width: 30px;
+}
+.green-line::after{
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 0;
+    background: #009688;
     height: 2px;
     width: 30px;
 }
@@ -287,4 +296,3 @@ svg rect {
 /***********************************
         /* END FONTS */
 /***********************************/
-

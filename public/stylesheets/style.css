@@ -46,6 +46,34 @@ img{
 	width: 320px;
 		margin: 0 auto;
 }
+
+.system-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.system-intro {
+	text-align: left;
+	margin-left: 0;
+}
+.system-effect {
+	text-align: left;
+}
+.system-effect span{
+	color: #f38844;
+}
+.system-intro  a {
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #f38844;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
 /*-- //slider --*/
 .w3-head-all h3 {
     font-size: 3em;

@@ -350,6 +350,10 @@ html .ma {
   padding: 0;
   margin-bottom: 20px;
 }
+.thumbnail2 {
+  padding: 0;
+  margin-bottom: 20px;
+}
 
 .thumbnail_small {
   max-width: 270px;
@@ -1598,7 +1602,10 @@ article .quote {
   text-align: left;
   margin-bottom: 25px;
 }
-
+.current__text2 {
+  text-align: left;
+  margin-top: 25px;
+}
 .current__quote {
   text-align: left;
 }

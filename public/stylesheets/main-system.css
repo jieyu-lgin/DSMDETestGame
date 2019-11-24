@@ -556,6 +556,22 @@ p.news__desc:hover {
   min-height: 45px;
   margin-bottom: 10px;
 }
+.news__text2 {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #4e4e4e;
+  line-height: 1.333;
+  min-height: 16px;
+  margin-bottom: 10px;
+}
+.news__text3 {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #4e4e4e;
+  line-height: 1.333;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
 /* 3.4. END News */
 
 /* 3.5. Posted  */

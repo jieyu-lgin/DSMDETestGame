@@ -55,6 +55,7 @@ var new119093001 = require('./routes/new119093001');
 var new119101101 = require('./routes/new119101101');
 var new119103101 = require('./routes/new119103101');
 var new119110601 = require('./routes/new119110601');
+var new119120201 = require('./routes/new119120201');
 var new119121901 = require('./routes/new119121901');
 var newTianjin190908 = require('./routes/newTianjin190908');
 var newTianjin191001 = require('./routes/newTianjin191001');

@@ -1089,28 +1089,30 @@
 .comment-wrapper {
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
     border-radius: 6px;
 }
-
+.comment-wrapper2 {
+    margin-bottom: 10px;
+}
 .comment-author {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 70px;
-            flex: 0 0 70px;
-    max-width: 70px;
+        -ms-flex: 0 0 140px;
+            flex: 0 0 140px;
+    max-width: 200px;
     margin-right: 20px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .comment-author img {
-    border-radius: 50%
+    border-radius: 10%
 }
 
 .comment-content {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(100% - 70px);
-            flex: 0 0 calc(100% - 70px);
-    max-width: calc(100% - 70px);
+        -ms-flex: 0 0 calc(100% - 140px);
+            flex: 0 0 calc(100% - 140px);
+    max-width: calc(100% - 140px);
 }
 
 .comment-content h5 {

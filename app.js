@@ -74,6 +74,7 @@ var new120011104 = require('./routes/new120011104');
 var newTianjin190908 = require('./routes/newTianjin190908');
 var newTianjin191001 = require('./routes/newTianjin191001');
 var newTianjin191002 = require('./routes/newTianjin191002');
+var familyEducation = require('./routes/familyEducation');
 var text1 = require('./routes/text1')
 var sky = require('./routes/sky');
 var base = require('./routes/base');
@@ -180,6 +181,8 @@ app.use('/MP_verify_yrjNz0FgoaWFaScJ.txt',text1)
 app.use('/newTianjin190908', newTianjin190908);
 app.use('/newTianjin191001', newTianjin191001);
 app.use('/newTianjin191002', newTianjin191002);
+app.use('/familyEducation', familyEducation);
+
 app.use('/sky', sky);
 app.use('/base', base);
 app.use('/train', train);

@@ -91,6 +91,7 @@ var new121022005 = require('./routes/new121022005');
 var new121022006 = require('./routes/new121022006');
 var new121022007 = require('./routes/new121022007');
 var new121022008 = require('./routes/new121022008');
+var new121022501 = require('./routes/new121022501');
 var newTianjin190908 = require('./routes/newTianjin190908');
 var newTianjin191001 = require('./routes/newTianjin191001');
 var newTianjin191002 = require('./routes/newTianjin191002');
@@ -217,6 +218,7 @@ app.use('/new121022005', new121022005);
 app.use('/new121022006', new121022006);
 app.use('/new121022007', new121022007);
 app.use('/new121022008', new121022008);
+app.use('/new121022501', new121022501);
 app.use('/MP_verify_yrjNz0FgoaWFaScJ.txt',text1)
 app.use('/newTianjin190908', newTianjin190908);
 app.use('/newTianjin191001', newTianjin191001);
